@@ -20,6 +20,16 @@
 */
 
 //CODE HERE
+class Employee{ 
+    constructor(name,shift) {
+        this.name = "name",
+        this.shift = "shift"
+    }
+
+getSchedule() {
+    console.log(`${this.name} works on ${this.shift}`)
+}
+}
 
 
 
@@ -34,6 +44,7 @@
 */
 
 //CODE HERE
+const empOne = new Employee("Jess", "weekday mornings, weekday afternoons");
 
 /*
     Call the `getSchedule` method on the
@@ -41,7 +52,7 @@
 */
 
 //CODE HERE
-
+empOne.getSchedule();
 
 /*
     Make a copy of the empOne object
@@ -56,7 +67,7 @@
 */
 
 //CODE HERE
-
+const empTwo = {...empOne, name:'Nick'}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -83,7 +94,18 @@
 */
 
 //CODE HERE
-
+class Manager extends Employee {
+    constuctor(name, shifts, employees) {
+        super (name, shifts)
+        this.employees = employees;
+    }
+    getEmployees() {
+        console.log(`${this.name} manages ${this.employees.join(',')}`)
+    }
+    addEmployee(emp) {
+        this.employees.push(emp);
+    }
+}
 
 
 /*
@@ -98,7 +120,7 @@
 */
 
 //CODE HERE
-
+const Manager = new Manager("Winston", "weekday mornings, weekday afternoons",["cece","shmidt"]);
 
 /*
     Call the `getEmployees` method on the
@@ -106,7 +128,7 @@
 */
 
 //CODE HERE
-
+Manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -114,7 +136,7 @@
 */
 
 //CODE HERE 
-
+Manager.getEmployees('Coach')
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -122,3 +144,4 @@
 */
 
 //CODE HERE
+Manager.getEmployees()
