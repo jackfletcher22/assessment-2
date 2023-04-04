@@ -87,10 +87,22 @@ const calcFinalPrice = (cartTottal, couponValue, tax) => {
 
     Your object should have at least 4 properties. 
 */
+const customerOutline = {
+    name: "name",
+    phone: Number,
+    email: "email",
+    address:'adress'
+
+
+       
+}
 
 /*
     TEXT ANSWER HERE
-
+I chose name because you must be able to identify who an order belongs to. This will print as a stirng because we need to be able to read the name.
+I chose phone number, because it allows the company to call the customer to a. let them know there order is ready, b. have the ability to contact the customer if any questions or concerns arise.
+I chose email because it allows the company to send a recipt and/or tracking information
+i chose address because the company must know where to deliver the food to.
 */
 
 /*
@@ -99,3 +111,9 @@ const calcFinalPrice = (cartTottal, couponValue, tax) => {
 */
 
 //CODE HERE
+const customer = {
+    name: "Richard",
+    phone: 801-456-7890,
+    email: "richiscool@gmail.com",
+    address: "3435 e shred road, Shredtown CO, 67890"
+}
