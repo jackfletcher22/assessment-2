@@ -150,7 +150,7 @@ const foodArr = [
 
 //CODE HERE
 const vegetarianFoodArr = filterByTag("vegetarian",foodArr)
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
 
@@ -194,7 +194,15 @@ const vegetarianFoodArr = filterByTag("vegetarian",foodArr)
 */
 
 //CODE HERE
-
+function filterByProperty(property, number, type, foodArr) {
+    let filteredArr = []
+    if (type === 'above') {
+        filteredArr = foodArr.filter(food => food[property] > number);
+    } else if (type === 'below') {
+        filteredArr = foodArr.filter(food => food[property]< number);
+    }
+    return filteredArr
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -204,3 +212,6 @@ const vegetarianFoodArr = filterByTag("vegetarian",foodArr)
 */
 
 //CODE HERE
+filterByProperty('rating', 4.5, 'above', foodArr)
+
+console.log(filterByProperty)

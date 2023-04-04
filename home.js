@@ -22,6 +22,11 @@
 */
 
 //CODE HERE
+const greetUser = (username) => {
+    return `Welcome back, ${username}` ;
+}
+greetUser('Richard')
+greetUser('Mik')
 
 
 
@@ -51,7 +56,13 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
-
+const canWeDeliver = (zipCode) => {
+    if(deliveryZone.includes(zipCode)) {
+        return "You're in our delivery zone!";
+    } else {
+        return "Sorry, we can't deliver to that address"
+    }
+}
 
 /* 
     Problem 2 Continued
@@ -71,7 +82,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+const canWeDeliverTwo = (zipCode) => {
+    for(let i = 0; i < deliveryZone.length; i++) {
+        if (deliverZone[i] === zipCode) {
 
+        }
+    }
+      return "You're in our delivery zone!";
+    
+}
 
 //////////////////PROBLEM 3////////////////////
 /* 
